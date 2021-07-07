@@ -39,17 +39,18 @@ read flavour
 
 
 echo -e "\n Setting up environment"
-sudo apt-get -y update
-sudo apt-get install curl -y
-sudo apt-get install u-boot-tools -y
-sudo apt-get -y install \
+sudo apt -y update
+sudo apt -y install \
  git \
  fastboot \
- sunxi-tools \
  u-boot-tools \
  adb \
  u-boot-tools \
  android-tools-fastboot \
+ u-boot-tools \
+ curl \
+ wget \
+ sunxi-tools \
 
 echo -e "\n Adding current user to dialout group"
 sudo usermod -a -G dialout $(logname)
